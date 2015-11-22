@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <head>
+        <title>I-Frame Guest</title>
+
+        <script>
+            window['@Neos:DocumentData'] = {
+                properties: {
+                    title: 'Guest Frame'
+                },
+                childNodes: {
+                  headline: {
+                    properties: {
+                        text: 'Hello World'
+                    }
+                  },
+
+                  paragraph: {
+                    properties: {
+                        text: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                        takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.`
+                    }
+                  }
+                }
+            };
+        </script>
+
+        <link rel="stylesheet" href="Dist/Styles/Guest.css">
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/medium-editor/latest/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+    </head>
+    <body>
+        <h1 data-__neos-access-id="headline" data-__neos-editor="Oneline" data-__neos-property="text">Hello World</h1>
+
+        <p data-__neos-access-id="paragraph" data-__neos-editor="RichText" data-__neos-property="text">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+            aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+            takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+            eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </p>
+
+        <script>
+            if (window.name === 'test2') {
+                document.querySelector('h1').innerHTML = 'Hello Guest #2!';
+            }
+
+            if (window.name === 'test3') {
+                document.querySelector('h1').innerHTML = 'Hello Guest #3!';
+            }
+        </script>
+        <script src="Dist/JavaScript/Guest.min.js" charset="utf-8"></script>
+    </body>
+</html>
